@@ -1,0 +1,1 @@
+cd ./bin;./SimpleTexture.bin;cd ..

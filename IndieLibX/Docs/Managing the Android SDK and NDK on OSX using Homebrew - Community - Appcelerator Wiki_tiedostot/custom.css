@@ -1,0 +1,30 @@
+
+/* Custom styles for Confluence (included for all themes by default) */
+
+body{ font-family:Trebuchet MS,Tahoma,Arial,sans-serif; }
+
+.wiki-content a { text-decoration:underline !important;}
+
+h1, h2, h3, 
+.dashboard .tabletitle h2 { color: #2B4771; }
+
+/* Customize the footer */
+#footer p.license, #footer p.license a,
+#footer {  background-color: #4E4848; padding-top: 10px; }
+#footer .license { border: none; }
+#poweredby { background-image: none; border: none; color: white; } 
+#poweredby a { color: white; }
+
+/* removing numbering of surveys */
+.survey-body .section-number {display: none;}
+
+/* CONF-28415 */
+form.editor .editor-default,
+.editor-fullheight {
+    height: 100%;
+    height: auto\9; /* IE8 */
+}
+
+/* End custom styles for Confluence */
+
+

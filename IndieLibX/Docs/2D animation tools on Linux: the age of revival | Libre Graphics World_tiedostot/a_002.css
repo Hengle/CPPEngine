@@ -1,0 +1,49 @@
+/* 
+WOO CUSTOM STYLESHEET
+---------------------
+
+Instructions:
+
+Add your custom styles here instead of style.css so it 
+is easier to update the theme. Simply copy an existing 
+style from style.css to this file, and modify it to 
+your liking.
+
+*/
+
+.post .txt {width: 355px; float: left; padding-bottom: 5px; }
+.post-bottom .tags { background:url(http://libregraphicsworld.org/themes/site_themes/headlines/images/ico-tags.png) no-repeat top left; padding:1px 0 2px 25px; height:16px;}
+
+blockquote, q {
+    background: url("http://libregraphicsworld.org/themes/site_themes/headlines/images/quote.png") no-repeat scroll 0px 0 transparent;
+    border: medium none;
+    color: #333333;
+    margin-left: 20px 0;
+    padding: 0 20px 0 50px;
+/*    background:#EFEFEF;
+        margin-left: 15px; */
+}
+
+#loopedSlider .container
+{
+    height: 350px;
+}
+#loopedSlider .post
+{
+    height: 257px !important;
+}
+
+div.comment-container img
+{
+	max-width: 463px;
+}
+
+acronym {
+	cursor: help;
+	border-bottom: 1px dashed #333; }
+
+small { font-size: 11px; }
+
+#p { font-family: Georgia, serif; font-size: 15px; }
+
+#topad{position:absolute;right:0px;top:25px;}

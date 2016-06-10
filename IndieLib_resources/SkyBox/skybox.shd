@@ -1,0 +1,59 @@
+[Vertex shader]
+
+ROW_MAJOR float4x4 mvp MVPSEMANTIC;
+
+struct VsIn {
+	float4 pos:       POSITION;
+};
+struct VsOut {
+	float4 pos:       POSITION;
+	float4 cubeCoord: TEXCOORD0;
+};
+
+VsOut main(VsIn In)
+{
+	VsOut Out=(VsOut)0;
+
+	//Out.pos = mul(mvp, In.pos);
+	// Nvidia seems to have some kind of weird precision problem here
+	//Out.pos.z *= 0.99999;
+	//Out.cubeCoord = In.pos.xyz;
+	//Out.cubeCoord.w=0;
+
+	return Out;
+}
+
+[Fragment shader]
+
+samplerCUBE Env;
+
+float4 fogColor;
+
+float2 scaleBias;
+
+struct VsOut {
+	float4 pos:       POSITION;
+	float4 cubeCoord: TEXCOORD0;
+};
+
+float4 main(VsOut In) : COLOR {
+	float4 sky = texCUBE(Env, In.cubeCoord);
+
+	float fog = saturate(normalize(In.cubeCoord).y * scaleBias.x + scaleBias.y);
+
+	fog *= fog * (3 - 2 * fog);
+
+	return lerp(fogColor, sky, fog);
+}
+/*
+struct VsOut {
+	float4 position: POSITION;
+	float4 texCoord: TEXCOORD0;
+};
+sampler2D Base;
+float4 main(VsOut IN): COLOR {
+	float4 color=(float4)0;
+	//color=tex2D(Base, IN.texCoord);
+	return color; 
+}
+*/

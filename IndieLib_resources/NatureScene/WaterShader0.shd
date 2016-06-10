@@ -1,0 +1,136 @@
+[Vertex shader]
+struct WaterVS_INPUT
+{
+    float3 position	: POSITION;
+	float2 ogl_MultiTexCoord0 : TEXCOORD0;
+};
+struct WaterVS_OUTPUT
+{
+    float4 position : POSITION;
+    float4 texcoord0  : TEXCOORD0;
+    float4 texcoord1  : TEXCOORD1;
+    float4 texcoord2  : TEXCOORD2;
+    float4 texcoord3  : TEXCOORD3;
+
+};
+ROW_MAJOR float4x4 worldViewProj MVPSEMANTIC;
+ROW_MAJOR float4x4 ogl_TextureMatrix1;
+float4	translation;
+float4	camera;
+float timer;
+
+WaterVS_OUTPUT main(WaterVS_INPUT IN)
+{
+	WaterVS_OUTPUT OUT;
+#if 0	
+	float4 regularPosition	  = float4(IN.position,1);
+	     regularPosition.y += cos(timer*0.75);
+	     
+
+	float4 correctPosition	  = regularPosition + translation;
+
+	OUT.texcoord0	    = mul(correctPosition,ogl_TextureMatrix1 );
+
+	OUT.texcoord1.xy	    = IN.ogl_MultiTexCoord0*2.0;
+	OUT.texcoord1.z=0;
+	OUT.texcoord1.w=1;
+	OUT.texcoord2	    = camera - correctPosition;
+	OUT.texcoord3	    = correctPosition;	
+	
+
+#else
+	float4 regularPosition	  = float4(IN.position,1);
+	     regularPosition.y += cos(timer*0.75);
+	
+	float4 correctPosition	  = regularPosition + translation;
+	
+
+	OUT.texcoord0	    = mul(correctPosition,ogl_TextureMatrix1 );
+
+	OUT.texcoord1.xy	    = IN.ogl_MultiTexCoord0*2.0;
+	OUT.texcoord1.z=0;
+	OUT.texcoord1.w=1;
+	OUT.texcoord2	    = camera - correctPosition;
+	OUT.texcoord3	    = correctPosition;	
+#endif
+	OUT.position = mul( regularPosition,worldViewProj );
+	return OUT;
+}
+
+[Fragment shader]
+
+struct WaterPS_OUTPUT
+{
+	float4 color : COLOR;
+};
+
+struct WaterVS_OUTPUT
+{
+    float4 position : POSITION;
+    float4 texcoord0  : TEXCOORD0;
+    float4 texcoord1  : TEXCOORD1;
+    float4 texcoord2  : TEXCOORD2;
+    float4 texcoord3  : TEXCOORD3;
+
+};
+
+float4	     terrainInfo;
+float timer;
+sampler2D reflection;
+sampler2D normalmap;
+sampler2D depthmap;
+
+WaterPS_OUTPUT main(WaterVS_OUTPUT IN)
+{
+	WaterPS_OUTPUT OUT;
+#if 0
+#if 0
+	float4	displacement	= IN.texcoord1;
+	float3	viewVector	= normalize(IN.texcoord2.xyz);
+	float2	projectedCoords = IN.texcoord0.xy/IN.texcoord0.w,
+	      uvDepthCoords   = float2((IN.texcoord3.x - terrainInfo.x)/terrainInfo.z,
+				     (IN.texcoord3.z - terrainInfo.y)/terrainInfo.w);
+
+	float scaledTimer     = timer*0.05;
+
+	displacement.x	     += scaledTimer;
+	displacement.y	     -= scaledTimer;
+
+	float depth    = tex2D(depthmap, uvDepthCoords).x;
+	float3	normal	 = normalize(tex2D(normalmap, displacement.xy).xyz*2.0 - 1.0)*0.025;
+	OUT.color   = tex2D(reflection, projectedCoords + normal.xy);
+
+	float alpha    = clamp(dot(float3(0.0, 1.0, 0.0), viewVector), 0.0, 1.0);
+	OUT.color.a = 2.0 - (alpha*alpha + depth);
+
+#else
+     OUT.color=float4(0,0,1,1);
+#endif
+
+#else
+   
+	float4	displacement	= IN.texcoord1;
+	float3	viewVector	= normalize(IN.texcoord2.xyz);
+	float2	projectedCoords = IN.texcoord0.xy/IN.texcoord0.w,
+	      uvDepthCoords   = float2((IN.texcoord3.x - terrainInfo.x)/terrainInfo.z,
+				     (IN.texcoord3.z - terrainInfo.y)/terrainInfo.w);
+	     
+	float scaledTimer     = timer*0.05;
+	
+	displacement.x	     += scaledTimer;
+	displacement.y	     -= scaledTimer;
+	
+	float depth    = tex2D(depthmap, uvDepthCoords).x;
+	float3	normal	 = normalize(tex2D(normalmap, displacement.xy).xyz*2.0 - 1.0)*0.025;
+	OUT.color   = tex2D(reflection, projectedCoords + normal.xy);
+	
+	float alpha    = clamp(dot(float3(0.0, 1.0, 0.0), viewVector), 0.0, 1.0);
+	OUT.color.a = 2.0 - (alpha*alpha + depth);
+#endif
+	// Gamma from 9.99 to 0.1
+	float gamma=1.5;
+	OUT.color.r=pow(abs(OUT.color.r), 1.0 / gamma);
+	OUT.color.g=pow(abs(OUT.color.g), 1.0 / gamma);
+	OUT.color.b=pow(abs(OUT.color.b), 1.0 / gamma);
+	return OUT;
+}
