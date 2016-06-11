@@ -68,10 +68,10 @@ public:
 		m_i=0;
 		shdname = defaultshader;
 		m_Mesh[0]=0;	
-		mAngleX = 0;
-		mAngleY = 0;
-		mSpeedRotation = 0.5;
-		mDelta=0;
+		mAngleX           = 0.0f;
+		mAngleY           = 0.0f;
+		m_nLastMousePositX = 0;
+		m_nLastMousePositY = 0;
 	}
 	virtual ~_3DAnimation()
 	{
@@ -80,10 +80,10 @@ public:
 	}
 	unsigned int m_i;
 	std::string shdname;
-	float	mAngleX;
-	float	mAngleY;
-	float	mSpeedRotation ;
-	float	mDelta;
+	float mAngleX;
+	float mAngleY;
+	int   m_nLastMousePositX;
+	int   m_nLastMousePositY;
 	AssimpView::MeshRenderer* m_Mesh[N];
 
 	virtual void actionPerformed(GUIEvent &evt)
@@ -189,6 +189,18 @@ public:
 		IRenderer::GetRendererInstance()->Clear(true,true, D3DXFROMWINEVECTOR4(0.35f, 0.53f, 0.7, 1.0f));
 		IRenderer::GetRendererInstance()->BeginScene();
 
+	if(STX_Service::GetInputInstance()->IsMouseButtonPressed(MBUTTON_LEFT))
+    {
+        int x=STX_Service::GetInputInstance()->GetMouseX();
+        int y=STX_Service::GetInputInstance()->GetMouseY();
+
+        mAngleX -= (x - m_nLastMousePositX);
+        mAngleY -= (y - m_nLastMousePositY);
+
+        m_nLastMousePositX = x;
+        m_nLastMousePositY = y;
+    }
+
 		D3DXFROMWINEMATRIX matRot;
 		D3DXFROMWINEMatrixRotationYawPitchRoll( &matRot,
 		                            D3DXFROMWINEToRadian(mAngleX),
@@ -214,11 +226,6 @@ public:
 			IRenderer::GetRendererInstance()->GetblendSrcAlpha(), 
 			IRenderer::GetRendererInstance()->GetnoDepthTest());
 
-		mDelta = timeGetTime() / 1000.0f;
-		if (STX_Service::GetInputInstance()->IsMouseButtonPressed (MBUTTON_LEFT))
-			mAngleX += mSpeedRotation * mDelta;
-		if (STX_Service::GetInputInstance()->IsMouseButtonPressed (MBUTTON_RIGHT))
-			mAngleY += mSpeedRotation * mDelta;
 		STXGUI::update();
 
 		IRenderer::GetRendererInstance()->EndScene();
