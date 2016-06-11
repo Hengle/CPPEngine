@@ -13,18 +13,18 @@ class _Shape3D: public STXGUI
 	static const unsigned int N=3;
 	Shape3D shape3D[N];
 	unsigned int m_i;
-	float	mAngleX;
-	float	mAngleY;
-	float	mSpeedRotation ;
-	float	mDelta;
+	float mAngleX;
+	float mAngleY;
+	int   m_nLastMousePositX;
+	int   m_nLastMousePositY;
 public:
 int init(unsigned int width, unsigned int height)
 {
 	m_i=0;	
-		mAngleX = 0;
-		mAngleY = 0;
-		mSpeedRotation = 0.5;
-		mDelta=0;
+	mAngleX           = 0.0f;
+	mAngleY           = 0.0f;
+	m_nLastMousePositX = 0;
+	m_nLastMousePositY = 0;
 	
         shape3D[0].CreateTexturedBox(1.0f, 1.0f, 1.0f, "AmbientLighting");
         shape3D[1].CreateBox(1.0f, 1.0f, 1.0f, "AmbientLighting");
@@ -40,6 +40,18 @@ int render( )
 	IRenderer::GetRendererInstance()->Clear(true, true, D3DXFROMWINEVECTOR4 (f, f, f, 1.0f));
 	IRenderer::GetRendererInstance()->BeginScene();
 
+	if(STX_Service::GetInputInstance()->IsMouseButtonPressed(MBUTTON_LEFT))
+    {
+        int x=STX_Service::GetInputInstance()->GetMouseX();
+        int y=STX_Service::GetInputInstance()->GetMouseY();
+
+        mAngleX -= (x - m_nLastMousePositX);
+        mAngleY -= (y - m_nLastMousePositY);
+
+        m_nLastMousePositX = x;
+        m_nLastMousePositY = y;
+    }
+
 		D3DXFROMWINEMATRIX matRot;
 		D3DXFROMWINEMatrixRotationYawPitchRoll( &matRot,
 		                            D3DXFROMWINEToRadian(mAngleX),
@@ -47,12 +59,6 @@ int render( )
 		                            0.0f );
 	
         shape3D[m_i].Draw(matRot);
-
-		mDelta = timeGetTime() / 1000.0f;
-		if (STX_Service::GetInputInstance()->IsMouseButtonPressed (MBUTTON_LEFT))
-			mAngleX += mSpeedRotation * mDelta;
-		if (STX_Service::GetInputInstance()->IsMouseButtonPressed (MBUTTON_RIGHT))
-			mAngleY += mSpeedRotation * mDelta;
 
 		const char* txt = "Use mouse buttons to rotate the model.";
 		IRenderer::GetRendererInstance()->drawText(txt, 10, 10, 
