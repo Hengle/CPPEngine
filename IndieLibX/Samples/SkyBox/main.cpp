@@ -185,7 +185,15 @@ int init(unsigned int width, unsigned int height)
 	camPos=D3DXFROMWINEVECTOR3(0.0f, 0.8f, 0.0f);
 	fogColor = D3DXFROMWINEVECTOR4(1.0f, 0.5f, 0.1f, 1.0f);
 
-	std::string res=stx_convertpath("/");
+	std::string res=stx_convertpath("/");		
+		
+	char *fileNames[6];
+	fileNames[0]=new char[128];
+	fileNames[1]=new char[128];
+	fileNames[2]=new char[128];
+	fileNames[3]=new char[128];
+	fileNames[4]=new char[128];
+	fileNames[5]=new char[128];
 
 	unsigned int j=0;
 	while(1)
@@ -193,34 +201,8 @@ int init(unsigned int width, unsigned int height)
 		LOG_FNLN;		
 		if(filename[j]==0)
 			break;
-#if !defined(CUBEMAPS)
-#if 0
-	char buf[128];
-	
-		std::vector<std::string> files;
-		stx_snprintf(buf, 128, "/SkyBox/%s/posx.%s", filename[j], ext[j]);
-		files.push_back(buf);
-		stx_snprintf(buf, 128, "/SkyBox/%s/negx.%s", filename[j], ext[j]);
-		files.push_back(buf);
-		stx_snprintf(buf, 128, "/SkyBox/%s/posy.%s", filename[j], ext[j]);
-		files.push_back(buf);
-		stx_snprintf(buf, 128, "/SkyBox/%s/negy.%s", filename[j], ext[j]);
-		files.push_back(buf);
-		stx_snprintf(buf, 128, "/SkyBox/%s/posz.%s", filename[j], ext[j]);
-		files.push_back(buf);
-		stx_snprintf(buf, 128, "/SkyBox/%s/negz.%s", filename[j], ext[j]);
-		files.push_back(buf);
-		env[j] = addCubemap(files, mipmaps, IRenderer::GetRendererInstance()->Gettrilinear());
 
-#else
-		LOG_FNLN;		
-		char *fileNames[6];
-		fileNames[0]=new char[128];
-		fileNames[1]=new char[128];
-		fileNames[2]=new char[128];
-		fileNames[3]=new char[128];
-		fileNames[4]=new char[128];
-		fileNames[5]=new char[128];
+		LOG_FNLN;
 	
 		stx_snprintf(fileNames[0], 128, "%sSkyBox/%s/posx.%s", res.c_str(), filename[j], ext[j]);
 		stx_snprintf(fileNames[1], 128, "%sSkyBox/%s/negx.%s", res.c_str(), filename[j], ext[j]);
@@ -230,12 +212,7 @@ int init(unsigned int width, unsigned int height)
 		stx_snprintf(fileNames[5], 128, "%sSkyBox/%s/negz.%s", res.c_str(), filename[j], ext[j]);
 		LOG_FNLN;		
 		env[j] = addCubemap(fileNames, mipmaps, IRenderer::GetRendererInstance()->Gettrilinear());
-		LOG_FNLN;		
-#endif
-
-#else
-		env[j] = IRenderer::GetRendererInstance()->addImageLibTexture(filename[j], mipmaps, IRenderer::GetRendererInstance()->Gettrilinear());
-#endif
+		LOG_FNLN;
 		j++;
 	}
 	
