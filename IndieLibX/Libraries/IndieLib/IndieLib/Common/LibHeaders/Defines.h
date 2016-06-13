@@ -155,7 +155,7 @@ users for really concrete purposes.
 
 #if !defined(SWIG) && !defined(SWIG_)
 #if defined(ANDROID)
-#define ApplicationLogic() mainX(int argc, char *argv[])
+#define IndieLib() mainX(int argc, char *argv[])
 #elif defined(OS_IPHONE) || defined(IPHONE_SIMULATOR)
 #define IndieLib() mainX (int argc, char *argv[])
 #elif defined(WIN_PHONE_APP)
