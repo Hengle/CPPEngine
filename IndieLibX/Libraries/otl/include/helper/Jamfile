@@ -1,3 +1,0 @@
-SubDir TOP include helper ;
-
-InstallHeader [ Wildcard *.h *.i *.inc *.fun *.tok ] : helper ;

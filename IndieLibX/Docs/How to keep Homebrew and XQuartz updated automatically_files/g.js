@@ -1,1 +1,0 @@
-document.write( '<iframe width="1" height="1" frameborder="0" src="http://d.agkn.com/iframe/2649/?che=1437045967&sk=052011015210000261064"></iframe>' );

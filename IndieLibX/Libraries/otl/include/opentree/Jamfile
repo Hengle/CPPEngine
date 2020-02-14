@@ -1,3 +1,0 @@
-SubDir TOP include opentree ;
-
-Recurse InstallHeader : .h .i .inc .fun .tok ;
