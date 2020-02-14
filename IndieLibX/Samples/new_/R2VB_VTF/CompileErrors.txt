@@ -1,0 +1,33 @@
+
+4>C:\IndieLibX\Samples\new_\DX\Skinning10\Skinning10.cpp(490,61): error C2131:  expression did not evaluate to a constant
+4>C:\IndieLibX\Samples\new_\DX\Skinning10\Skinning10.cpp(490,63): message :  failure was caused by a read of a variable outside its lifetime
+4>C:\IndieLibX\Samples\new_\DX\Skinning10\Skinning10.cpp(490,63): message :  see usage of 'iMesh'
+4>C:\IndieLibX\Samples\new_\DX\Skinning10\Skinning10.cpp(497,1): error C3863:  array type 'D3DXFROMWINEMATRIX ['function']' is not assignable
+4>C:\IndieLibX\Samples\new_\DX\Skinning10\Skinning10.cpp(506,61): error C2131:  expression did not evaluate to a constant
+4>C:\IndieLibX\Samples\new_\DX\Skinning10\Skinning10.cpp(506,63): message :  failure was caused by a read of a variable outside its lifetime
+4>C:\IndieLibX\Samples\new_\DX\Skinning10\Skinning10.cpp(506,63): message :  see usage of 'iMesh'
+4>C:\IndieLibX\Samples\new_\DX\Skinning10\Skinning10.cpp(512,1): error C3863:  array type 'D3DXFROMWINEMATRIX ['function']' is not assignable
+4>Done building project "Skinning10.vcxproj" -- FAILED.
+1>cl : Command line warning D9035 : option 'Gm' has been deprecated and will be removed in a future release
+1>GPUPhysics.cpp
+1>C:\IndieLibX\Samples\new_\R2VB_VTF\R2VB-OceanWater\GPUPhysics.cpp(670,67): error C2664:  'void IRenderer::setTexture(const char *,const TextureID,const SamplerStateID,const int,const VertexBufferID)': cannot convert argument 1 from 'int' to 'const char *'
+1>C:\IndieLibX\Samples\new_\R2VB_VTF\R2VB-OceanWater\GPUPhysics.cpp(670,51): message :  Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+1>C:\IndieLibX\Samples\new_\R2VB_VTF\R2VB-OceanWater\GPUPhysics.cpp(676,70): error C2664:  'void IRenderer::setTexture(const char *,const TextureID,const SamplerStateID,const int,const VertexBufferID)': cannot convert argument 1 from 'int' to 'const char *'
+1>C:\IndieLibX\Samples\new_\R2VB_VTF\R2VB-OceanWater\GPUPhysics.cpp(676,51): message :  Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+1>C:\IndieLibX\Samples\new_\R2VB_VTF\R2VB-OceanWater\GPUPhysics.cpp(719,65): error C2664:  'void IRenderer::setTexture(const char *,const TextureID,const SamplerStateID,const int,const VertexBufferID)': cannot convert argument 1 from 'int' to 'const char *'
+1>C:\IndieLibX\Samples\new_\R2VB_VTF\R2VB-OceanWater\GPUPhysics.cpp(719,51): message :  Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+1>C:\IndieLibX\Samples\new_\R2VB_VTF\R2VB-OceanWater\GPUPhysics.cpp(725,70): error C2664:  'void IRenderer::setTexture(const char *,const TextureID,const SamplerStateID,const int,const VertexBufferID)': cannot convert argument 1 from 'int' to 'const char *'
+1>C:\IndieLibX\Samples\new_\R2VB_VTF\R2VB-OceanWater\GPUPhysics.cpp(725,51): message :  Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+1>C:\IndieLibX\Samples\new_\R2VB_VTF\R2VB-OceanWater\GPUPhysics.cpp(740,65): error C2664:  'void IRenderer::setTexture(const char *,const TextureID,const SamplerStateID,const int,const VertexBufferID)': cannot convert argument 1 from 'int' to 'const char *'
+1>C:\IndieLibX\Samples\new_\R2VB_VTF\R2VB-OceanWater\GPUPhysics.cpp(740,51): message :  Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+1>C:\IndieLibX\Samples\new_\R2VB_VTF\R2VB-OceanWater\GPUPhysics.cpp(746,71): error C2664:  'void IRenderer::setTexture(const char *,const TextureID,const SamplerStateID,const int,const VertexBufferID)': cannot convert argument 1 from 'int' to 'const char *'
+1>CPUphysics.cpp
+1>C:\IndieLibX\Samples\new_\R2VB_VTF\R2VB-OceanWater\GPUPhysics.cpp(746,51): message :  Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+1>C:\IndieLibX\Samples\new_\R2VB_VTF\R2VB-OceanWater\CPUphysics.h(30,36): error C2440:  'return': cannot convert from 'complex_number [64][64]' to 'TextureID'
+1>App.cpp
+1>C:\IndieLibX\Samples\new_\R2VB_VTF\R2VB-OceanWater\CPUphysics.h(30,44): message :  There is no context in which this conversion is possible
+1>C:\IndieLibX\Samples\new_\R2VB_VTF\R2VB-OceanWater\CPUphysics.h(30,36): error C2440:  'return': cannot convert from 'complex_number [64][64]' to 'TextureID'
+1>Generating Code...
+1>C:\IndieLibX\Samples\new_\R2VB_VTF\R2VB-OceanWater\CPUphysics.h(30,44): message :  There is no context in which this conversion is possible
+1>Done building project "R2VB-OceanWater.vcxproj" -- FAILED.
+========== Build: 0 succeeded, 4 failed, 23 up-to-date, 0 skipped ==========

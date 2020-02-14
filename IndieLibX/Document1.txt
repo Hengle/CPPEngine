@@ -1,0 +1,300 @@
+ Volume in drive C is Acer
+ Volume Serial Number is 0251-7955
+
+ Directory of C:\MinGW\bin
+
+19.10.2019  07.55    <DIR>          .
+19.10.2019  07.55    <DIR>          ..
+25.07.2009  05.41             4 426 aclocal
+25.07.2009  06.04            31 144 aclocal-1.10
+12.09.2010  05.39            31 175 aclocal-1.11
+25.07.2009  08.54            12 151 aclocal-1.4
+25.07.2009  08.45            14 089 aclocal-1.5
+25.07.2009  08.33            13 281 aclocal-1.6
+25.07.2009  08.18            12 379 aclocal-1.7
+25.07.2009  08.20            19 340 aclocal-1.8
+25.07.2009  06.40            19 840 aclocal-1.9
+10.02.2019  17.24           942 094 addr2line.exe
+10.02.2019  17.24           967 694 ar.exe
+10.02.2019  17.24         1 635 342 as.exe
+05.09.2011  09.19             4 415 autoconf
+25.07.2009  05.07             4 899 autoconf-2.13
+05.09.2011  16.08            14 725 autoconf-2.68
+05.09.2011  09.19             4 415 autoheader
+25.07.2009  05.07             8 632 autoheader-2.13
+05.09.2011  16.08             8 607 autoheader-2.68
+05.09.2011  09.19             4 415 autom4te
+05.09.2011  16.08            32 692 autom4te-2.68
+25.07.2009  05.41             4 426 automake
+25.07.2009  06.04           233 869 automake-1.10
+12.09.2010  05.39           257 052 automake-1.11
+25.07.2009  08.54           199 655 automake-1.4
+25.07.2009  08.45           217 972 automake-1.5
+25.07.2009  08.33           236 993 automake-1.6
+25.07.2009  08.18           270 949 automake-1.7
+25.07.2009  08.20           211 015 automake-1.8
+25.07.2009  06.40           223 140 automake-1.9
+30.04.2014  15.33            24 433 autopoint
+05.09.2011  09.19             4 415 autoreconf
+25.07.2009  05.07             6 046 autoreconf-2.13
+05.09.2011  16.08            21 140 autoreconf-2.68
+05.09.2011  09.19             4 415 autoscan
+25.07.2009  05.07             9 531 autoscan-2.13
+05.09.2011  16.08            17 186 autoscan-2.68
+05.09.2011  09.19             4 415 autoupdate
+25.07.2009  05.07             3 169 autoupdate-2.13
+05.09.2011  16.08            33 930 autoupdate-2.68
+12.10.2019  00.14         1 104 910 c++.exe
+10.02.2019  17.24           939 022 c++filt.exe
+12.10.2019  00.15         1 103 886 cpp.exe
+10.02.2019  17.24           998 926 dlltool.exe
+10.02.2019  17.24           116 750 dllwrap.exe
+10.02.2019  17.24           103 438 elfedit.exe
+30.04.2014  15.33           101 902 envsubst.exe
+12.10.2019  00.14         1 104 910 g++.exe
+12.10.2019  00.15            72 718 gcc-ar.exe
+12.10.2019  00.15            72 718 gcc-nm.exe
+12.10.2019  00.15            72 718 gcc-ranlib.exe
+12.10.2019  00.15         1 102 350 gcc.exe
+12.10.2019  00.15           612 366 gcov-dump.exe
+12.10.2019  00.15           648 718 gcov-tool.exe
+12.10.2019  00.15           774 670 gcov.exe
+15.09.2013  04.52        30 595 068 gdb.exe
+15.09.2013  04.52           908 334 gdbserver.exe
+30.04.2014  15.33           101 902 gettext.exe
+30.04.2014  15.33             4 616 gettext.sh
+30.04.2014  15.33            42 569 gettextize
+10.02.2019  17.24         1 008 654 gprof.exe
+05.10.2016  17.41            75 278 iconv.exe
+05.09.2011  09.19             4 415 ifnames
+25.07.2009  05.07             2 784 ifnames-2.13
+05.09.2011  16.08             4 163 ifnames-2.68
+10.02.2019  17.24         1 280 014 ld.bfd.exe
+10.02.2019  17.24         1 280 014 ld.exe
+12.10.2019  00.16            24 310 libatomic-1.dll
+02.09.2013  20.36           440 258 libexpat-1.dll
+12.10.2019  00.15         1 057 630 libgcc_s_dw2-1.dll
+30.04.2014  15.33         1 345 800 libgettextlib-0-18-3.dll
+30.04.2014  15.33           346 426 libgettextpo-0.dll
+30.04.2014  15.33           273 762 libgettextsrc-0-18-3.dll
+01.04.2018  00.48           478 960 libgmp-10.dll
+12.10.2019  00.16           185 784 libgomp-1.dll
+05.10.2016  17.41         1 415 068 libiconv-2.dll
+30.04.2014  15.33           484 613 libintl-8.dll
+02.04.2018  01.25         2 107 639 libisl-15.dll
+25.09.2010  22.16            61 211 libltdl-7.dll
+01.04.2018  22.12           105 896 libmpc-3.dll
+17.01.2018  23.11           378 357 libmpfr-4.dll
+12.10.2019  00.15           496 043 libquadmath-0.dll
+12.10.2019  00.15            14 521 libssp-0.dll
+12.10.2019  00.15         1 524 512 libstdc++-6.dll
+25.09.2010  22.16           318 526 libtool
+25.09.2010  22.16            78 285 libtoolize
+04.10.2013  22.20            52 224 mingw-get.exe
+12.10.2019  00.14         1 104 910 mingw32-c++.exe
+12.10.2019  00.14         1 104 910 mingw32-g++.exe
+12.10.2019  00.15         1 102 350 mingw32-gcc-8.2.0.exe
+12.10.2019  00.15            72 718 mingw32-gcc-ar.exe
+12.10.2019  00.15            72 718 mingw32-gcc-nm.exe
+12.10.2019  00.15            72 718 mingw32-gcc-ranlib.exe
+12.10.2019  00.15         1 102 350 mingw32-gcc.exe
+02.09.2012  03.42           219 662 mingw32-make.exe
+06.07.2019  19.10            10 254 mingwm10.dll
+30.04.2014  15.33            30 222 msgattrib.exe
+30.04.2014  15.33            28 174 msgcat.exe
+30.04.2014  15.33            29 710 msgcmp.exe
+30.04.2014  15.33            28 174 msgcomm.exe
+30.04.2014  15.33            26 126 msgconv.exe
+30.04.2014  15.33            26 126 msgen.exe
+30.04.2014  15.33            24 590 msgexec.exe
+30.04.2014  15.33            30 734 msgfilter.exe
+30.04.2014  15.33            68 622 msgfmt.exe
+30.04.2014  15.33           123 918 msggrep.exe
+30.04.2014  15.33            47 630 msginit.exe
+30.04.2014  15.33            51 726 msgmerge.exe
+30.04.2014  15.33            35 854 msgunfmt.exe
+30.04.2014  15.33            28 174 msguniq.exe
+30.04.2014  15.33           100 878 ngettext.exe
+10.02.2019  17.24           953 870 nm.exe
+10.02.2019  17.24         1 089 550 objcopy.exe
+10.02.2019  17.24         1 714 190 objdump.exe
+10.02.2019  17.24           967 694 ranlib.exe
+10.02.2019  17.24           644 110 readelf.exe
+30.04.2014  15.33            24 590 recode-sr-latin.exe
+10.02.2019  17.24           943 630 size.exe
+10.02.2019  17.24           943 118 strings.exe
+10.02.2019  17.24         1 089 550 strip.exe
+10.02.2019  17.24           966 158 windmc.exe
+10.02.2019  17.24         1 056 782 windres.exe
+30.04.2014  15.33           231 950 xgettext.exe
+21.04.2018  21.21           143 886 zlib1.dll
+             123 File(s)     77 509 470 bytes
+               2 Dir(s)  20 995 756 032 bytes free
+
+C:\IndieLibX>dir C:\MinGW\bin*.exe
+ Volume in drive C is Acer
+ Volume Serial Number is 0251-7955
+
+ Directory of C:\MinGW
+
+File Not Found
+
+C:\IndieLibX>dir C:\MinGW\bin\*.exe
+ Volume in drive C is Acer
+ Volume Serial Number is 0251-7955
+
+ Directory of C:\MinGW\bin
+
+10.02.2019  17.24           942 094 addr2line.exe
+10.02.2019  17.24           967 694 ar.exe
+10.02.2019  17.24         1 635 342 as.exe
+12.10.2019  00.14         1 104 910 c++.exe
+10.02.2019  17.24           939 022 c++filt.exe
+12.10.2019  00.15         1 103 886 cpp.exe
+10.02.2019  17.24           998 926 dlltool.exe
+10.02.2019  17.24           116 750 dllwrap.exe
+10.02.2019  17.24           103 438 elfedit.exe
+30.04.2014  15.33           101 902 envsubst.exe
+12.10.2019  00.14         1 104 910 g++.exe
+12.10.2019  00.15            72 718 gcc-ar.exe
+12.10.2019  00.15            72 718 gcc-nm.exe
+12.10.2019  00.15            72 718 gcc-ranlib.exe
+12.10.2019  00.15         1 102 350 gcc.exe
+12.10.2019  00.15           612 366 gcov-dump.exe
+12.10.2019  00.15           648 718 gcov-tool.exe
+12.10.2019  00.15           774 670 gcov.exe
+15.09.2013  04.52        30 595 068 gdb.exe
+15.09.2013  04.52           908 334 gdbserver.exe
+30.04.2014  15.33           101 902 gettext.exe
+10.02.2019  17.24         1 008 654 gprof.exe
+05.10.2016  17.41            75 278 iconv.exe
+10.02.2019  17.24         1 280 014 ld.bfd.exe
+10.02.2019  17.24         1 280 014 ld.exe
+04.10.2013  22.20            52 224 mingw-get.exe
+12.10.2019  00.14         1 104 910 mingw32-c++.exe
+12.10.2019  00.14         1 104 910 mingw32-g++.exe
+12.10.2019  00.15         1 102 350 mingw32-gcc-8.2.0.exe
+12.10.2019  00.15            72 718 mingw32-gcc-ar.exe
+12.10.2019  00.15            72 718 mingw32-gcc-nm.exe
+12.10.2019  00.15            72 718 mingw32-gcc-ranlib.exe
+12.10.2019  00.15         1 102 350 mingw32-gcc.exe
+02.09.2012  03.42           219 662 mingw32-make.exe
+30.04.2014  15.33            30 222 msgattrib.exe
+30.04.2014  15.33            28 174 msgcat.exe
+30.04.2014  15.33            29 710 msgcmp.exe
+30.04.2014  15.33            28 174 msgcomm.exe
+30.04.2014  15.33            26 126 msgconv.exe
+30.04.2014  15.33            26 126 msgen.exe
+30.04.2014  15.33            24 590 msgexec.exe
+30.04.2014  15.33            30 734 msgfilter.exe
+30.04.2014  15.33            68 622 msgfmt.exe
+30.04.2014  15.33           123 918 msggrep.exe
+30.04.2014  15.33            47 630 msginit.exe
+30.04.2014  15.33            51 726 msgmerge.exe
+30.04.2014  15.33            35 854 msgunfmt.exe
+30.04.2014  15.33            28 174 msguniq.exe
+30.04.2014  15.33           100 878 ngettext.exe
+10.02.2019  17.24           953 870 nm.exe
+10.02.2019  17.24         1 089 550 objcopy.exe
+10.02.2019  17.24         1 714 190 objdump.exe
+10.02.2019  17.24           967 694 ranlib.exe
+10.02.2019  17.24           644 110 readelf.exe
+30.04.2014  15.33            24 590 recode-sr-latin.exe
+10.02.2019  17.24           943 630 size.exe
+10.02.2019  17.24           943 118 strings.exe
+10.02.2019  17.24         1 089 550 strip.exe
+10.02.2019  17.24           966 158 windmc.exe
+10.02.2019  17.24         1 056 782 windres.exe
+30.04.2014  15.33           231 950 xgettext.exe
+              61 File(s)     63 934 806 bytes
+               0 Dir(s)  20 976 660 480 bytes free
+
+C:\IndieLibX>dir C:\MinGW\bin\*.exe
+ Volume in drive C is Acer
+ Volume Serial Number is 0251-7955
+
+ Directory of C:\MinGW\bin
+
+10.02.2019  17.24           942 094 addr2line.exe
+10.02.2019  17.24           967 694 ar.exe
+10.02.2019  17.24         1 635 342 as.exe
+12.10.2019  00.14         1 104 910 c++.exe
+10.02.2019  17.24           939 022 c++filt.exe
+12.10.2019  00.15         1 103 886 cpp.exe
+10.02.2019  17.24           998 926 dlltool.exe
+10.02.2019  17.24           116 750 dllwrap.exe
+10.02.2019  17.24           103 438 elfedit.exe
+30.04.2014  15.33           101 902 envsubst.exe
+12.10.2019  00.14         1 104 910 g++.exe
+12.10.2019  00.15            72 718 gcc-ar.exe
+12.10.2019  00.15            72 718 gcc-nm.exe
+12.10.2019  00.15            72 718 gcc-ranlib.exe
+12.10.2019  00.15         1 102 350 gcc.exe
+12.10.2019  00.15           612 366 gcov-dump.exe
+12.10.2019  00.15           648 718 gcov-tool.exe
+12.10.2019  00.15           774 670 gcov.exe
+15.09.2013  04.52        30 595 068 gdb.exe
+15.09.2013  04.52           908 334 gdbserver.exe
+30.04.2014  15.33           101 902 gettext.exe
+10.02.2019  17.24         1 008 654 gprof.exe
+05.10.2016  17.41            75 278 iconv.exe
+10.02.2019  17.24         1 280 014 ld.bfd.exe
+10.02.2019  17.24         1 280 014 ld.exe
+04.10.2013  22.20            52 224 mingw-get.exe
+12.10.2019  00.14         1 104 910 mingw32-c++.exe
+12.10.2019  00.14         1 104 910 mingw32-g++.exe
+12.10.2019  00.15         1 102 350 mingw32-gcc-8.2.0.exe
+12.10.2019  00.15            72 718 mingw32-gcc-ar.exe
+12.10.2019  00.15            72 718 mingw32-gcc-nm.exe
+12.10.2019  00.15            72 718 mingw32-gcc-ranlib.exe
+12.10.2019  00.15         1 102 350 mingw32-gcc.exe
+02.09.2012  03.42           219 662 mingw32-make.exe
+30.04.2014  15.33            30 222 msgattrib.exe
+30.04.2014  15.33            28 174 msgcat.exe
+30.04.2014  15.33            29 710 msgcmp.exe
+30.04.2014  15.33            28 174 msgcomm.exe
+30.04.2014  15.33            26 126 msgconv.exe
+30.04.2014  15.33            26 126 msgen.exe
+30.04.2014  15.33            24 590 msgexec.exe
+30.04.2014  15.33            30 734 msgfilter.exe
+30.04.2014  15.33            68 622 msgfmt.exe
+30.04.2014  15.33           123 918 msggrep.exe
+30.04.2014  15.33            47 630 msginit.exe
+30.04.2014  15.33            51 726 msgmerge.exe
+30.04.2014  15.33            35 854 msgunfmt.exe
+30.04.2014  15.33            28 174 msguniq.exe
+30.04.2014  15.33           100 878 ngettext.exe
+10.02.2019  17.24           953 870 nm.exe
+10.02.2019  17.24         1 089 550 objcopy.exe
+10.02.2019  17.24         1 714 190 objdump.exe
+10.02.2019  17.24           967 694 ranlib.exe
+10.02.2019  17.24           644 110 readelf.exe
+30.04.2014  15.33            24 590 recode-sr-latin.exe
+10.02.2019  17.24           943 630 size.exe
+10.02.2019  17.24           943 118 strings.exe
+10.02.2019  17.24         1 089 550 strip.exe
+10.02.2019  17.24           966 158 windmc.exe
+10.02.2019  17.24         1 056 782 windres.exe
+30.04.2014  15.33           231 950 xgettext.exe
+              61 File(s)     63 934 806 bytes
+               0 Dir(s)  20 969 914 368 bytes free
+
+C:\IndieLibX>dir C:\MinGW\bin\ming*.exe
+ Volume in drive C is Acer
+ Volume Serial Number is 0251-7955
+
+ Directory of C:\MinGW\bin
+
+04.10.2013  22.20            52 224 mingw-get.exe
+12.10.2019  00.14         1 104 910 mingw32-c++.exe
+12.10.2019  00.14         1 104 910 mingw32-g++.exe
+12.10.2019  00.15         1 102 350 mingw32-gcc-8.2.0.exe
+12.10.2019  00.15            72 718 mingw32-gcc-ar.exe
+12.10.2019  00.15            72 718 mingw32-gcc-nm.exe
+12.10.2019  00.15            72 718 mingw32-gcc-ranlib.exe
+12.10.2019  00.15         1 102 350 mingw32-gcc.exe
+02.09.2012  03.42           219 662 mingw32-make.exe
+               9 File(s)      4 904 560 bytes
+               0 Dir(s)  20 961 280 000 bytes free
+
+C:\IndieLibX>
